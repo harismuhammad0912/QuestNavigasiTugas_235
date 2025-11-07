@@ -38,3 +38,29 @@ fun ListData(
                 )
             )
         }
+    ) { isiRuang ->
+        // PERBAIKAN: Memindahkan 'verticalArrangement' ke dalam Column
+        Column(
+            modifier = Modifier
+                .fillMaxSize() // Mengisi seluruh layar
+                .background(Color(0xFFE8D3ED))
+                .padding(isiRuang) // Terapkan padding dari Scaffold
+                .padding(horizontal = dimensionResource(R.dimen.padding_medium)), // Padding horizontal
+            verticalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.padding_medium))
+        ) {
+            items.forEach { item ->
+                Card(
+                    modifier = Modifier
+                        .fillMaxWidth(), // Mengisi lebar
+                    elevation = CardDefaults.cardElevation(defaultElevation = 10.dp),
+                    colors = CardDefaults.cardColors(
+                        containerColor = Color.White
+                    )
+                ) {
+                    Column(
+                        modifier = Modifier.padding(16.dp) // Padding di dalam Card
+                    ) {
+                        Text(
+                            text = item.first.uppercase(),
+                            fontSize = 16.sp
+                        )
