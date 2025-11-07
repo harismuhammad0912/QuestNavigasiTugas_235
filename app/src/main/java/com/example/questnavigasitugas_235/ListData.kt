@@ -64,3 +64,37 @@ fun ListData(
                             text = item.first.uppercase(),
                             fontSize = 16.sp
                         )
+                        Text(
+                            text = item.second,
+                            fontWeight = FontWeight.Bold,
+                            fontFamily = FontFamily.Cursive,
+                            fontSize = 20.sp
+                        )
+                    }
+                }
+            }
+            Spacer(modifier = Modifier.height(20.dp))
+            Button(
+                modifier = Modifier
+                    .fillMaxWidth(), // Mengisi lebar
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = colorResource(R.color.purple_200)
+                ),
+                onClick = OnBackToBeranda
+            ) {
+                Text(text = stringResource(R.string.beranda))
+            }
+            Spacer(modifier = Modifier.height(15.dp))
+            Button(
+                modifier = Modifier
+                    .fillMaxWidth(), // Mengisi lebar
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = Color(0xFFDCA2E6)
+                ),
+                onClick = OnFormulirBtnClick
+            ) {
+                Text(text = stringResource(R.string.formulir))
+            }
+           }
+       }
+}
