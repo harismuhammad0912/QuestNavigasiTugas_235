@@ -45,3 +45,14 @@ fun Beranda(onNavigateToList: () -> Unit) {
             modifier = Modifier.padding(bottom = 100.dp)
         )
 
+        Button(
+            onClick = onNavigateToList,
+            colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF673AB7)),
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(50.dp)
+        ) {
+            Text("Submit", fontSize = 18.sp)
+        }
+    }
+}
