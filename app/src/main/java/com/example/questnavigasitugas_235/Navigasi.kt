@@ -39,3 +39,19 @@ fun DataApp(
                     }
                 )
             }
+            composable(route = Navigasi.ListData.name) {
+                ListData(
+                    OnFormulirBtnClick = {
+                        navController.navigate(route = Navigasi.Formulir.name)
+                    },
+                    OnBackToBeranda = { backToBeranda(navController) }
+                )
+            }
+            composable(route= Navigasi.Formulir.name) {
+                Formulir (
+                    OnBackToListData = { backToListData(navController) }
+                )
+            }
+        }
+    }
+}
