@@ -15,3 +15,12 @@ import com.example.questnavigasitugas_235.R
 
 @Composable
 fun Beranda(onNavigateToList: () -> Unit) {
+
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(24.dp),
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center
+    ) {
+}
