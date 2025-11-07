@@ -11,11 +11,10 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.questnavigasitugas_235.R
+import com.example.questnavigasitugas_235.R // Import R
 
 @Composable
 fun Beranda(onNavigateToList: () -> Unit) {
-
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -23,4 +22,11 @@ fun Beranda(onNavigateToList: () -> Unit) {
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {
-}
+        Text(
+            text = "SELAMAT DATANG",
+            fontSize = 32.sp,
+            fontWeight = FontWeight.Bold,
+            color = Color(0xFF673AB7),
+            modifier = Modifier.padding(bottom = 50.dp)
+        )
+
