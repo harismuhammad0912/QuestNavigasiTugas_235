@@ -30,3 +30,18 @@ fun Beranda(onNavigateToList: () -> Unit) {
             modifier = Modifier.padding(bottom = 50.dp)
         )
 
+        Image(
+            painter = painterResource(id = R.drawable.profile),
+            contentDescription = "Logo",
+            modifier = Modifier
+                .size(150.dp)
+                .padding(bottom = 50.dp)
+        )
+
+        Text(text = "Muhammad Haris", fontSize = 18.sp)
+        Text(
+            text = "20230140235",
+            fontSize = 18.sp,
+            modifier = Modifier.padding(bottom = 100.dp)
+        )
+
