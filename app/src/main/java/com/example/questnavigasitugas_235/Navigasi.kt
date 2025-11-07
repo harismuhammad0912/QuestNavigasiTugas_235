@@ -55,3 +55,16 @@ fun DataApp(
         }
     }
 }
+private fun backToBeranda(
+    navController: NavController
+){
+
+    navController.popBackStack(route = Navigasi.Beranda.name, inclusive = false)
+}
+
+private fun backToListData(
+    navController: NavController
+){
+
+    navController.popBackStack(route = Navigasi.ListData.name, inclusive=false)
+}
