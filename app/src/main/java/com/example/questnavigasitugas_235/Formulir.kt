@@ -39,3 +39,8 @@ fun Formulir(
                     fontWeight = FontWeight.Bold,
                     fontSize = 20.sp
                 )
+            }
+            Spacer(modifier = Modifier.height(16.dp))
+            }
+        }
+}
