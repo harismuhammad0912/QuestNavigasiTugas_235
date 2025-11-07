@@ -20,7 +20,6 @@ enum class Navigasi {
     ListData,
     Formulir
 }
-
 @Composable
 fun DataApp(
     navController: NavHostController = rememberNavController(),
@@ -40,33 +39,3 @@ fun DataApp(
                     }
                 )
             }
-            composable(route = Navigasi.ListData.name) {
-                ListData(
-                    OnFormulirBtnClick = {
-                        navController.navigate(route = Navigasi.Formulir.name)
-                    },
-                    OnBackToBeranda = { backToBeranda(navController) }
-                )
-            }
-            composable(route= Navigasi.Formulir.name) {
-                Formulir (
-                    OnBackToListData = { backToListData(navController) }
-                )
-            }
-        }
-    }
-}
-
-private fun backToBeranda(
-    navController: NavController
-){
-
-    navController.popBackStack(route = Navigasi.Beranda.name, inclusive = false)
-}
-
-private fun backToListData(
-    navController: NavController
-){
-
-    navController.popBackStack(route = Navigasi.ListData.name, inclusive = false)
-}
