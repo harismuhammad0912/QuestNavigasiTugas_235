@@ -27,3 +27,14 @@ fun ListData(
         Pair(stringResource(R.string.status), "Lajang"),
         Pair(stringResource(R.string.alamat), "Sleman")
     )
+    Scaffold(
+        modifier = Modifier,
+        topBar = {
+            TopAppBar(
+                title = { Text(text = stringResource(R.string.list), color = Color.White) },
+                // PERBAIKAN: Menambahkan 'containerColor'
+                colors = TopAppBarDefaults.mediumTopAppBarColors(
+                    containerColor = colorResource(R.color.purple_200)
+                )
+            )
+        }
